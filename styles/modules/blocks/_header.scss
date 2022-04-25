@@ -1,0 +1,56 @@
+.header {
+  background-color: $headerBgColor;
+  @include flex;
+  padding: 22px 50px 22px;
+  @include tabletStyles {
+    padding: 24px 40px 24px;
+  }
+  @include mobileStyles {
+    padding: 20px 20px;
+  }
+
+  &__logo {
+    display: block;
+    object-position: center;
+    object-fit: fill;
+    @include logoSize;
+    transition: transform 1.5s ease;
+    @include tabletStyles {
+      @include logoSize(36px);
+    }
+    @include mobileStyles {
+      @include logoSize(30px);
+    }
+  }
+  &__logo:hover {
+    cursor: pointer;
+    transform: rotate(-360deg);
+  }
+
+  &__menu {
+
+  }
+
+  &__menu-list {
+    @include inlineToBlock;
+    list-style: none;
+    @include flex(row, center, space-between, 40px);
+
+  }
+
+  &__menu-item {
+    @include inlineToBlock;
+    font-family: $fontFamilyMenu;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $headerFontColor;
+  }
+
+  &__menu-link {
+    @include inlineToBlock;
+    text-decoration: none;
+    color: inherit;
+  }
+}

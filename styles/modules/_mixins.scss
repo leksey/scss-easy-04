@@ -1,0 +1,30 @@
+@mixin flex($direction: row, $align: center, $justify: space-between, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}
+
+@mixin logoSize($size: 40px) {
+  width: $size;
+  height: $size;
+}
+
+@mixin inlineToBlock {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin tabletStyles {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobileStyles {
+  @media (max-width: 360px) {
+    @content;
+  }
+}
