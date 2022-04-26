@@ -3,10 +3,10 @@
   @include flex;
   padding: 22px 50px 22px;
   @include tabletStyles {
-    padding: 24px 40px 24px;
+    padding: 22px 36px 22px 40px;
   }
   @include mobileStyles {
-    padding: 20px 20px;
+    padding: 15px 16px 15px 20px;
   }
 
   &__logo {
@@ -17,6 +17,7 @@
     transition: transform 1.5s ease;
     @include tabletStyles {
       @include logoSize(36px);
+      position: relative;
     }
     @include mobileStyles {
       @include logoSize(30px);
@@ -27,6 +28,16 @@
     transform: rotate(-360deg);
   }
 
+  &__logo_hidden {
+      z-index: 1;
+    @include tabletStyles {
+      z-index: -1;
+    }
+    @include mobileStyles {
+      z-index: 1;
+    }
+  }
+
   &__menu {
 
   }
@@ -35,7 +46,30 @@
     @include inlineToBlock;
     list-style: none;
     @include flex(row, center, space-between, 40px);
+    @include tabletStyles {
+      display: none;
+      position: absolute;
+      left: 40px;
+      top: 30px;
+    }
+  }
 
+  &__menu-list_open {
+    @include tabletStyles {
+      @include inlineToBlock;
+      @include flex(row, center, space-between, 40px);
+    }
+    @include mobileStyles {
+      background-color: $headerBgColor;
+      @include inlineToBlock;
+      @include flex(column, center, space-between, 12px);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 70px;
+      padding-top: 6px;
+      padding-bottom: 26px;
+    }
   }
 
   &__menu-item {
@@ -52,5 +86,24 @@
     @include inlineToBlock;
     text-decoration: none;
     color: inherit;
+  }
+  &__menu-button {
+    display: none;
+    background-image: url(../../../images/menu-icon.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    @include tabletStyles {
+      @include inlineToBlock;
+    }
+  }
+  &__menu-button_close {
+    background-image: url(../../../images/menu-close-icon.svg);
   }
 }
