@@ -1,4 +1,5 @@
 .header {
+  max-width: 100%;
   background-color: $headerBgColor;
   @include flex;
   padding: 22px 50px 22px;
@@ -43,8 +44,9 @@
   }
 
   &__menu-list {
-    @include inlineToBlock;
+    min-width: $minWidth;
     list-style: none;
+    @include removeSpacing;
     @include flex(row, center, space-between, 40px);
     @include tabletStyles {
       display: none;
@@ -56,36 +58,32 @@
 
   &__menu-list_open {
     @include tabletStyles {
-      @include inlineToBlock;
       @include flex(row, center, space-between, 40px);
     }
     @include mobileStyles {
       background-color: $headerBgColor;
-      @include inlineToBlock;
       @include flex(column, center, space-between, 12px);
       position: absolute;
       left: 0;
       right: 0;
-      top: 70px;
-      padding-top: 6px;
+      top: 69px;
+      padding-top: 7px;
       padding-bottom: 26px;
     }
   }
 
   &__menu-item {
-    @include inlineToBlock;
-    font-family: $fontFamilyMenu;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: $headerFontColor;
+    @include removeSpacing;
   }
 
   &__menu-link {
-    @include inlineToBlock;
+    @include removeSpacing;
+    @include fontStyle(normal, 400, 16px, 24px, $headerFontColor);
     text-decoration: none;
-    color: inherit;
+
+    &:hover {
+      font-weight: 700;
+    }
   }
   &__menu-button {
     display: none;
@@ -100,7 +98,7 @@
     margin-left: auto;
     cursor: pointer;
     @include tabletStyles {
-      @include inlineToBlock;
+      @include removeSpacing;
     }
   }
   &__menu-button_close {

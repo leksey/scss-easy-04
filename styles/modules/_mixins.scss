@@ -6,19 +6,40 @@
   gap: $gap;
 }
 
+@mixin fontStyle($style, $weight, $size, $lineHeight, $color) {
+  font-family: $fontFamily;
+  font-style: $style;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineHeight;
+  color: $color;
+}
+
 @mixin logoSize($size: 40px) {
   width: $size;
   height: $size;
 }
 
-@mixin inlineToBlock {
+@mixin removeSpacing {
   display: block;
   margin: 0;
   padding: 0;
 }
 
+@mixin smallDesktopStyles {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
 @mixin tabletStyles {
   @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin smallTabletStyles {
+  @media (max-width: 640px) {
     @content;
   }
 }
