@@ -1,0 +1,72 @@
+.composition {
+  display: grid;
+  margin: 0 auto;
+  max-width: $maxWidth;
+  box-sizing: border-box;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content) 1fr minmax(min-content, max-content);
+  justify-content: space-between;
+  gap: 60px;
+  padding: 50px;
+  background-color: $compositionBgColor;
+  @include smallDesktopStyles {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+  @include mobileStyles {
+    padding: 40px 20px 20px 20px;
+  }
+  &__title {
+    @include removeSpacing;
+    @include fontStyle(normal, 400, 18px, 28px, $compositionFontColor);
+    @include smallTabletStyles {
+      font-size: 14px;
+      line-height: 20px;
+      border-top: solid 1px;
+      padding-top: 20px;
+    }
+  }
+  &__subtitle {
+    @include removeSpacing;
+    margin-top: -20px;
+    @include fontStyle(normal, 400, 64px, 64px, $compositionFontColor);
+    @include smallTabletStyles {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+  &__photo {
+    @include removeSpacing;
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1/5;
+    @include smallDesktopStyles {
+      grid-column: 1/2;
+      grid-row: 3/5;
+    }
+  }
+  &__caption-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+    gap: 20px;
+    @include smallDesktopStyles {
+      margin-top: 0;
+      margin-bottom: -30px;
+      gap: 36px;
+    }
+  }
+  &__caption {
+    @include removeSpacing;
+    max-width: 469px;
+    @include fontStyle(normal, 400, 18px, 28px, $leadFontColor);
+    @include mobileStyles {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  &__caption_bold {
+    font-weight: 700;
+  }
+}
