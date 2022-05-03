@@ -1,14 +1,15 @@
-.composition {
+.camera {
   display: grid;
   margin: 0 auto;
   max-width: $maxWidth;
   box-sizing: border-box;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content) 1fr minmax(min-content, max-content);
+  grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) 1fr;
   justify-content: space-between;
   gap: 60px;
   padding: 50px;
-  background-color: $compositionBgColor;
+  background-color: $cameraBgColor;
+  color: $cameraFontColor;
   @include smallDesktopStyles {
     grid-template-columns: 1fr;
     padding: 40px;
@@ -19,8 +20,9 @@
   &__label {
     @include removeSpacing;
     padding: 0 4px;
-    @include fontStyle(normal, 400, 18px, 28px, $compositionFontColor);
+    @include fontStyle(normal, 400, 18px, 28px, $cameraFontColor);
     text-transform: uppercase;
+    align-self: end;
     @include smallTabletStyles {
       font-size: 14px;
       line-height: 20px;
@@ -34,17 +36,20 @@
   &__title {
     @include removeSpacing;
     margin-top: -20px;
-    @include fontStyle(normal, 400, 64px, 64px, $compositionFontColor);
+    @include fontStyle(normal, 400, 122px, 122px, $cameraFontColor);
     @include smallTabletStyles {
-      font-size: 30px;
-      line-height: 38px;
+      font-size: 48px;
+      line-height: 56px;
     }
+  }
+  &__title-item {
+    @include removeSpacing;
   }
   &__photo {
     @include removeSpacing;
     width: 100%;
     grid-column: 2/3;
-    grid-row: 1/5;
+    grid-row: 1/4;
     @include smallDesktopStyles {
       grid-column: 1/2;
       grid-row: 3/5;
@@ -65,7 +70,7 @@
   &__caption {
     @include removeSpacing;
     max-width: 469px;
-    @include fontStyle(normal, 400, 18px, 28px, $compositionFontColor);
+    @include fontStyle(normal, 400, 18px, 28px, $cameraFontColor);
     @include mobileStyles {
       font-size: 14px;
       line-height: 18px;
@@ -74,12 +79,12 @@
   &__caption_bold {
     font-weight: 700;
   }
-  &__content-list {
+  &__reviews {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 56px;
     margin: 0;
-    padding: 0 4px;
+    padding: 120px 0 0;
     list-style: none;
     grid-column: 1/3;
     @include smallDesktopStyles {
@@ -89,8 +94,9 @@
       grid-template-columns: repeat(1, 1fr);
     }
   }
-  &__content-item {
-    @include fontStyle(normal, 400, 18px, 28px, inherit);
+  &__review {
+    @include fontStyle(normal, 400, 43px, 43px, inherit);
+    max-width: 526px;
     @include smallDesktopStyles {
       border-bottom: solid 1px;
       padding: 30px 0 30px;
@@ -103,8 +109,26 @@
       }
     }
     @include mobileStyles {
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+  &__review-author-name {
+    display: block;
+    padding: 60px 0 10px;
+    @include fontStyle(normal, 400, 18px, 28px, inherit);
+    @include mobileStyles {
+      padding: 30px 0 6px;
       font-size: 14px;
-      line-height: 18px;
+      line-height: 20px;
+    }
+  }
+  &__review-author-profile {
+    @include removeSpacing;
+    @include fontStyle(normal, 400, 14px, 24px, inherit);
+    @include mobileStyles {
+      font-size: 12px;
+      line-height: 12px;
     }
   }
 }
