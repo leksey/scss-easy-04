@@ -13,6 +13,14 @@
     height: 40px;
     font-size: 14px;
   }
+  &_orders {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    @include smallDesktopStyles {
+      grid-column: 1/2;
+      grid-row: 6/7;
+    }
+  }
 
   &:hover {
     font-weight: 500;
