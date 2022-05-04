@@ -1,0 +1,46 @@
+.apply {
+  display: grid;
+  margin: 0 auto;
+  max-width: $maxWidth;
+  box-sizing: border-box;
+  grid-template-columns: minmax(min-content, max-content) 1fr;
+  grid-template-rows: 1fr minmax(min-content, max-content);
+  justify-content: space-between;
+  row-gap: 120px;
+  column-gap: 50px;
+  padding: 50px 50px 36px;
+  background-color: $applyBgColor;
+  @include smallDesktopStyles {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+  @include mobileStyles {
+    padding: 40px 20px 20px 20px;
+  }
+  &__icon {
+    display: block;
+    padding-top: 10px;
+    object-position: center;
+    object-fit: fill;
+    width: 129px;
+    height: 95px;
+    @include smallDesktopStyles {
+      display: none;
+    }
+  }
+  &__title {
+    @include removeSpacing;
+    white-space: pre-line;
+    @include fontStyle(normal, 400, 120px, 120px, $applyFontColor);
+    @include smallDesktopStyles {
+      font-size: 100px;
+      line-height: 100px;
+    }
+    @include smallTabletStyles {
+      font-size: 48px;
+      line-height: 50px;
+      border-top: solid 1px #fff;
+      padding-top: 20px;
+    }
+  }
+}

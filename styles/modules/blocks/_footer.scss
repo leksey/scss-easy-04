@@ -1,0 +1,21 @@
+.footer {
+  display: block;
+  margin: 0 auto;
+  max-width: $maxWidth;
+  height: 124px;
+  box-sizing: border-box;
+  padding: 50px;
+  background-color: $footerBgColor;
+  @include tabletStyles {
+    height: 104px;
+  }
+  @include mobileStyles {
+    padding: 20px;
+    height: 124px;
+    height: 64px;
+  }
+  &__copyright {
+    @include removeSpacing;
+    @include fontStyle(normal, 700, 15px, 24px, $footerFontColor);
+  }
+}
