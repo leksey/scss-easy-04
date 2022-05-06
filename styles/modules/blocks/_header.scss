@@ -1,7 +1,7 @@
 .header {
+  @include flex;
   max-width: 100%;
   background-color: $headerBgColor;
-  @include flex;
   padding: 22px 50px 22px;
   @include tabletStyles {
     padding: 22px 36px 22px 40px;

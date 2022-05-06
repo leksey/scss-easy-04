@@ -14,9 +14,9 @@
       <img src="images/logo.svg" alt="" class="header__logo">
       <nav class="header__menu">
         <ul class="header__menu-list">
-          <li class="header__menu-item"><a class="header__menu-link" href="#">Композиция</a></li>
-          <li class="header__menu-item"><a class="header__menu-link" href="#">Камера</a></li>
-          <li class="header__menu-item"><a class="header__menu-link" href="#">Поиск заказов</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="#composition">Композиция</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="#camera">Камера</a></li>
+          <li class="header__menu-item"><a class="header__menu-link" href="#orders">Поиск заказов</a></li>
         </ul>
         <button type="button" class="header__menu-button" aria-label="Меню"></button>
       </nav>
@@ -28,16 +28,18 @@
         <p class="lead__caption">Фотография в природных условиях, уроки по композиции и по пользованию камерой.</p>
         <button type="button" class="button" aria-label="Подробнее">Подробнее</button>
       </section>
-      <section class="composition">
+      <section id="composition" class="composition">
         <p class="composition__label">композиция</p>
         <h2 class="composition__title">Изучите
           композицию</h2>
         <img src="images/composition-photo.png" alt="Фото дороги чере лес секвойи" class="composition__photo">
         <div class="composition__caption-wrapper">
-          <p class="composition__caption">Вы изучите гармоничное размещение всех элементов изображения на <span class="composition__caption_bold">снимке</span>.</p>
-          <p class="composition__caption">Изучите композицию интуитивную и какие-то определённые законы.</p>
+          <p class="composition__caption">Вы изучите гармоничное размещение всех
+            элементов изображения на <span class="composition__caption_bold">снимке</span>.</p>
+          <p class="composition__caption">Изучите композицию интуитивную
+            и какие-то определённые законы.</p>
         </div>
-        <button type="button" class="button" aria-label="Записаться">Записаться!</button>
+        <button type="button" class="button" aria-label="Записаться" onclick="location.href='#email'">Записаться!</button>
         <ul class="composition__content-list">
           <li class="composition__content-item">Правило третей, при котором нужно распологать объекты на пересечениях.</li>
           <li class="composition__content-item">Простота: убирай всё лишнее и кадрируй!</li>
@@ -45,25 +47,28 @@
           <li class="composition__content-item">3D глубина кадра: расположи объект позади и перед другими предметами.</li>
         </ul>
       </section>
-      <section class="camera">
+      <section id="camera" class="camera">
         <p class="camera__label">камера</p>
-        <h2 class="camera__title">
-          <span class="camera__title-item">Настройка</span>
-          <span class="camera__title-item">Съемка</span>
-          <span class="camera__title-item">Обработка</span></h2>
+        <h2 class="camera__title">Настройка
+          Съемка
+          Обработка</h2>
         <img src="images/camera-photo.png" alt="Фото леса" class="camera__photo">
         <h3 class="camera__label">отзывы про часть о камерах:</h3>
         <ul class="camera__reviews">
           <li class="camera__review">на этом курсе я научился пользоватся камерой, как настоящий профессионал!<span class="camera__review-author-name">Питер, водитель.</span><span class="camera__review-author-profile">@piter123</span></li>
-          <li class="camera__review">супер крутой курс! на части про фотики я стал разбираться в предназначении кнопок<span class="camera__review-author-name">Джон, спортсмен.</span><span class="camera__review-author-profile">@john_sport</span></li>
+          <li class="camera__review">супер крутой курс!
+            на части про фотики
+            я стал разбираться в предназначении кнопок<span class="camera__review-author-name">Джон, спортсмен.</span><span class="camera__review-author-profile">@john_sport</span></li>
         </ul>
       </section>
-      <section class="orders">
+      <section id="orders" class="orders">
         <p class="orders__label">поиск заказов</p>
         <h2 class="orders__title">Научим находить заказы!</h2>
         <img src="images/orders-photo.png" alt="Фото леса" class="orders__photo">
-        <p class="orders__caption">Мы научим вас искать заказы на всяких фриланс биржах, а когда вы сделаете крутое портфолио, мы поможем найти постоянную работу.</p>
-        <button type="button" class="button button_orders" aria-label="Записаться">Записаться!</button>
+        <div class="orders__caption-wrapper">
+          <p class="orders__caption">Мы научим вас искать заказы на всяких фриланс биржах, а когда вы сделаете крутое портфолио, мы поможем найти постоянную работу.</p>
+          <button type="button" class="button button_orders" aria-label="Записаться" onclick="location.href='#email'">Записаться!</button>
+        </div>
       </section>
       <section class="apply">
         <img src="images/arrow-right.svg" alt="стрелка вправо" class="apply__icon">

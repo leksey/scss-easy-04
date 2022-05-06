@@ -15,6 +15,9 @@
     padding: 40px;
   }
   @include mobileStyles {
+    row-gap: 200px;
+  }
+  @include mobileStyles {
     padding: 40px 20px 20px 20px;
   }
   &__icon {
