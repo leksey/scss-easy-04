@@ -6,6 +6,7 @@
   box-sizing: border-box;
   padding: 50px;
   background-color: $footerBgColor;
+  color: $footerFontColor;
   @include tabletStyles {
     height: 104px;
   }
@@ -16,6 +17,6 @@
   }
   &__copyright {
     @include removeSpacing;
-    @include fontStyle(normal, 700, 15px, 24px, $footerFontColor);
+    @include fontStyle(normal, 700, 15px, 24px);
   }
 }

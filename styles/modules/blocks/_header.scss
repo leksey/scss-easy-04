@@ -2,6 +2,7 @@
   @include flex;
   max-width: 100%;
   background-color: $headerBgColor;
+  color: $headerFontColor;
   padding: 22px 50px 22px;
   @include tabletStyles {
     padding: 22px 36px 22px 40px;
@@ -74,7 +75,7 @@
 
   &__menu-link {
     @include removeSpacing;
-    @include fontStyle(normal, 400, 16px, 24px, $headerFontColor);
+    @include fontStyle(normal, 400, 16px, 24px);
     text-decoration: none;
 
     &:hover {

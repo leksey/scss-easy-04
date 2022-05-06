@@ -1,14 +1,5 @@
 .orders {
-  display: grid;
-  margin: 0 auto;
-  max-width: $maxWidth;
-  box-sizing: border-box;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content) 1fr;
-  justify-content: space-between;
-  gap: 60px;
-  padding: 50px;
-  background-color: $ordersBgColor;
+  @include sectionDefaultStyles(60px,minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content) 1fr, $ordersBgColor, $ordersFontColor);
   @include smallDesktopStyles {
     grid-template-columns: 1fr;
     padding: 40px;
@@ -19,7 +10,7 @@
   &__label {
     @include removeSpacing;
     padding: 0 4px;
-    @include fontStyle(normal, 400, 18px, 28px, $ordersFontColor);
+    @include fontStyle(normal, 400, 18px, 28px);
     text-transform: uppercase;
     @include smallTabletStyles {
       font-size: 14px;
@@ -35,7 +26,7 @@
     @include removeSpacing;
     grid-column: 1/2;
     grid-row: 2/3;
-    @include fontStyle(normal, 400, 64px, 64px, $ordersFontColor);
+    @include fontStyle(normal, 400, 64px, 64px);
     @include smallTabletStyles {
       font-size: 32px;
       line-height: 38px;
@@ -49,7 +40,7 @@
     grid-row: 3/5;
     @include smallDesktopStyles {
       grid-column: 1/2;
-      grid-row: 3/5;
+      grid-row: 3/4;
     }
     @include mobileStyles {
       margin-top: 0;
@@ -78,7 +69,7 @@
   &__caption {
     @include removeSpacing;
     max-width: 380px;
-    @include fontStyle(normal, 400, 18px, 28px, $ordersFontColor);
+    @include fontStyle(normal, 400, 18px, 28px);
     @include smallDesktopStyles {
       grid-column: 1/2;
       grid-row: 5/6;

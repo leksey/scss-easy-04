@@ -28,6 +28,7 @@
   gap: 0;
   max-width: 100%;
   background-color: #DF2626;
+  color: #FBFBFB;
   padding: 22px 50px 22px;
 }
 @media (max-width: 768px) {
@@ -139,7 +140,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #FBFBFB;
+  color: inherit;
   text-decoration: none;
 }
 .header__menu-link:hover {
@@ -171,16 +172,17 @@
 
 .lead {
   display: grid;
-  margin: 0 auto;
-  max-width: 1440px;
-  box-sizing: border-box;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: minmax(-webkit-min-content, -webkit-max-content) minmax(-webkit-min-content, -webkit-max-content) 1fr;
   grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) 1fr;
   justify-content: space-between;
-  background-color: #fff;
   gap: 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 50px;
+  background-color: #fff;
+  color: #000;
 }
 @media (max-width: 1024px) {
   .lead {
@@ -202,7 +204,7 @@
   font-weight: 400;
   font-size: 100px;
   line-height: 110px;
-  color: #000;
+  color: inherit;
 }
 @media (max-width: 640px) {
   .lead__title {
@@ -235,7 +237,7 @@
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
-  color: #000;
+  color: inherit;
 }
 @media (max-width: 480px) {
   .lead__caption {
@@ -297,16 +299,17 @@
 
 .composition {
   display: grid;
-  margin: 0 auto;
-  max-width: 1440px;
-  box-sizing: border-box;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: minmax(-webkit-min-content, -webkit-max-content) minmax(-webkit-min-content, -webkit-max-content) minmax(-webkit-min-content, -webkit-max-content) 1fr minmax(-webkit-min-content, -webkit-max-content);
   grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content) 1fr minmax(min-content, max-content);
   justify-content: space-between;
   gap: 50px;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 50px;
   background-color: #FFCE00;
+  color: #000;
 }
 @media (max-width: 1024px) {
   .composition {
@@ -330,7 +333,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #000;
+  color: inherit;
   text-transform: uppercase;
 }
 @media (max-width: 640px) {
@@ -354,7 +357,7 @@
   font-weight: 400;
   font-size: 64px;
   line-height: 64px;
-  color: #000;
+  color: inherit;
 }
 @media (max-width: 640px) {
   .composition__title {
@@ -406,7 +409,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #000;
+  color: inherit;
 }
 @media (max-width: 480px) {
   .composition__caption {
@@ -477,14 +480,14 @@
 
 .camera {
   display: grid;
-  margin: 0 auto;
-  max-width: 1440px;
-  box-sizing: border-box;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: minmax(-webkit-min-content, -webkit-max-content) minmax(-webkit-min-content, -webkit-max-content) 1fr;
   grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) 1fr;
   justify-content: space-between;
   gap: 50px;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 50px;
   background-color: #000;
   color: #fff;
@@ -511,7 +514,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #fff;
+  color: inherit;
   text-transform: uppercase;
   align-self: end;
 }
@@ -536,7 +539,7 @@
   font-weight: 400;
   font-size: 122px;
   line-height: 122px;
-  color: #fff;
+  color: inherit;
 }
 @media (max-width: 768px) {
   .camera__title {
@@ -588,7 +591,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #fff;
+  color: inherit;
 }
 @media (max-width: 480px) {
   .camera__caption {
@@ -696,16 +699,17 @@
 
 .orders {
   display: grid;
-  margin: 0 auto;
-  max-width: 1440px;
-  box-sizing: border-box;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: minmax(-webkit-min-content, -webkit-max-content) minmax(-webkit-min-content, -webkit-max-content) minmax(-webkit-min-content, -webkit-max-content) 1fr;
   grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content) 1fr;
   justify-content: space-between;
   gap: 60px;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
   padding: 50px;
   background-color: #fff;
+  color: #000;
 }
 @media (max-width: 1024px) {
   .orders {
@@ -728,7 +732,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #000;
+  color: inherit;
   text-transform: uppercase;
 }
 @media (max-width: 640px) {
@@ -753,7 +757,7 @@
   font-weight: 400;
   font-size: 64px;
   line-height: 64px;
-  color: #000;
+  color: inherit;
 }
 @media (max-width: 640px) {
   .orders__title {
@@ -773,7 +777,7 @@
 @media (max-width: 1024px) {
   .orders__photo {
     grid-column: 1/2;
-    grid-row: 3/5;
+    grid-row: 3/4;
   }
 }
 @media (max-width: 480px) {
@@ -815,7 +819,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  color: #000;
+  color: inherit;
 }
 @media (max-width: 1024px) {
   .orders__caption {
@@ -879,19 +883,21 @@
 
 .apply {
   display: grid;
-  margin: 0 auto;
-  max-width: 1440px;
-  box-sizing: border-box;
-  grid-template-columns: minmax(-webkit-min-content, -webkit-max-content) 1fr;
-  grid-template-columns: minmax(min-content, max-content) 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr minmax(-webkit-min-content, -webkit-max-content);
   grid-template-rows: 1fr minmax(min-content, max-content);
   justify-content: space-between;
-  row-gap: 120px;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-  padding: 50px 50px 36px;
+  gap: 50px;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 50px;
   background-color: #DF2626;
+  color: #fff;
+  grid-template-columns: minmax(-webkit-min-content, -webkit-max-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content) 1fr;
+  row-gap: 120px;
+  padding-bottom: 36px;
 }
 @media (max-width: 1024px) {
   .apply {
@@ -934,7 +940,7 @@
   font-weight: 400;
   font-size: 120px;
   line-height: 120px;
-  color: #fff;
+  color: inherit;
 }
 @media (max-width: 1024px) {
   .apply__title {
@@ -972,7 +978,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  color: #000;
+  color: inherit;
   letter-spacing: 0.375px;
 }
 @media (max-width: 480px) {
@@ -1014,6 +1020,7 @@
   box-sizing: border-box;
   padding: 50px;
   background-color: #DF2626;
+  color: #fff;
 }
 @media (max-width: 768px) {
   .footer {
@@ -1036,5 +1043,5 @@
   font-weight: 700;
   font-size: 15px;
   line-height: 24px;
-  color: #fff;
+  color: inherit;
 }/*# sourceMappingURL=style.css.map */

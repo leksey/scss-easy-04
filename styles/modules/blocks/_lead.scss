@@ -1,14 +1,5 @@
 .lead {
-  display: grid;
-  margin: 0 auto;
-  max-width: $maxWidth;
-  box-sizing: border-box;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) 1fr;
-  justify-content: space-between;
-  background-color: $leadBgColor;
-  gap: 60px;
-  padding: 50px;
+  @include sectionDefaultStyles ();
   @include smallDesktopStyles {
     grid-template-columns: 1fr;
     padding: 40px;
@@ -18,7 +9,7 @@
   }
   &__title {
     @include removeSpacing;
-    @include fontStyle(normal, 400, 100px, 110px, $leadFontColor);
+    @include fontStyle(normal, 400, 100px, 110px);
     @include smallTabletStyles {
       font-size: 47px;
       line-height: 56px;
@@ -38,7 +29,7 @@
     @include removeSpacing;
     margin-left: 4px;
     max-width: 469px;
-    @include fontStyle(normal, 400, 20px, 28px, $leadFontColor);
+    @include fontStyle(normal, 400, 20px, 28px);
     @include mobileStyles {
       font-size: 14px;
       line-height: 18px;

@@ -1,15 +1,5 @@
 .camera {
-  display: grid;
-  margin: 0 auto;
-  max-width: $maxWidth;
-  box-sizing: border-box;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content) 1fr;
-  justify-content: space-between;
-  gap: 50px;
-  padding: 50px;
-  background-color: $cameraBgColor;
-  color: $cameraFontColor;
+  @include sectionDefaultStyles(50px, minmax(min-content, max-content) minmax(min-content, max-content) 1fr, $cameraBgColor, $cameraFontColor);
   @include smallDesktopStyles {
     grid-template-columns: 1fr;
     padding: 40px;
@@ -21,7 +11,7 @@
   &__label {
     @include removeSpacing;
     padding: 0 4px;
-    @include fontStyle(normal, 400, 18px, 28px, $cameraFontColor);
+    @include fontStyle(normal, 400, 18px, 28px);
     text-transform: uppercase;
     align-self: end;
     @include smallTabletStyles {
@@ -37,7 +27,7 @@
   &__title {
     @include removeSpacing;
     white-space: pre-line;
-    @include fontStyle(normal, 400, 122px, 122px, $cameraFontColor);
+    @include fontStyle(normal, 400, 122px, 122px);
     @include tabletStyles {
       margin-top: -20px;
     }
@@ -72,7 +62,7 @@
   &__caption {
     @include removeSpacing;
     max-width: 469px;
-    @include fontStyle(normal, 400, 18px, 28px, $cameraFontColor);
+    @include fontStyle(normal, 400, 18px, 28px);
     @include mobileStyles {
       font-size: 14px;
       line-height: 18px;
@@ -101,7 +91,7 @@
     }
   }
   &__review {
-    @include fontStyle(normal, 400, 43px, 43px, inherit);
+    @include fontStyle(normal, 400, 43px, 43px);
     white-space: pre-line;
     max-width: 526px;
     @include smallDesktopStyles {

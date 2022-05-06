@@ -6,7 +6,7 @@
   gap: $gap;
 }
 
-@mixin fontStyle($style, $weight, $size, $lineHeight, $color) {
+@mixin fontStyle($style, $weight, $size, $lineHeight, $color: inherit) {
   font-family: $fontFamily;
   font-style: $style;
   font-weight: $weight;
@@ -48,4 +48,18 @@
   @media (max-width: 480px) {
     @content;
   }
+}
+
+@mixin sectionDefaultStyles($gap: 60px, $rowsTemplate: minmax(min-content, max-content) minmax(min-content, max-content) 1fr, $bgColor: $leadBgColor, $fontColor: $leadFontColor) {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: $rowsTemplate;
+  justify-content: space-between;
+  gap: $gap;
+  max-width: $maxWidth;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 50px;
+  background-color: $bgColor;
+  color: $fontColor;
 }

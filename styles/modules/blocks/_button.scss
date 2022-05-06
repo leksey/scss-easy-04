@@ -1,6 +1,6 @@
 .button {
   @include removeSpacing;
-  background-color: #fff;
+  background-color: $buttonBgColor;
   border: solid #000 2px;
   border-radius: 999px;
   width: 228px;

@@ -1,15 +1,8 @@
 .apply {
-  display: grid;
-  margin: 0 auto;
-  max-width: $maxWidth;
-  box-sizing: border-box;
+  @include sectionDefaultStyles(50px, 1fr minmax(min-content, max-content), $applyBgColor, $applyFontColor);
   grid-template-columns: minmax(min-content, max-content) 1fr;
-  grid-template-rows: 1fr minmax(min-content, max-content);
-  justify-content: space-between;
   row-gap: 120px;
-  column-gap: 50px;
-  padding: 50px 50px 36px;
-  background-color: $applyBgColor;
+  padding-bottom: 36px;
   @include smallDesktopStyles {
     grid-template-columns: 1fr;
     padding: 40px;
@@ -34,7 +27,7 @@
   &__title {
     @include removeSpacing;
     white-space: pre-line;
-    @include fontStyle(normal, 400, 120px, 120px, $applyFontColor);
+    @include fontStyle(normal, 400, 120px, 120px);
     @include smallDesktopStyles {
       font-size: 100px;
       line-height: 100px;

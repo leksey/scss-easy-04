@@ -13,7 +13,7 @@
     border-right: none;
     border-radius: 8px 0 0 8px;
     background-color: $inputBgColor;
-    @include fontStyle(normal, 400, 14px, 24px, $inputFontColor);
+    @include fontStyle(normal, 400, 14px, 24px);
     letter-spacing: 0.375px;
     @include mobileStyles {
       width: 175px;
