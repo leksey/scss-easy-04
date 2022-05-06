@@ -1,0 +1,39 @@
+.lead {
+  @include sectionDefaultStyles ();
+  @include smallDesktopStyles {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+  @include mobileStyles {
+    padding: 20px;
+  }
+  &__title {
+    @include removeSpacing;
+    @include fontStyle(normal, 400, 100px, 110px);
+    @include smallTabletStyles {
+      font-size: 47px;
+      line-height: 56px;
+    }
+  }
+  &__photo {
+    @include removeSpacing;
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1/4;
+    @include smallDesktopStyles {
+      grid-column: 1/2;
+      grid-row: 2/4;
+    }
+  }
+  &__caption {
+    @include removeSpacing;
+    margin-left: 4px;
+    max-width: 469px;
+    @include fontStyle(normal, 400, 20px, 28px);
+    @include mobileStyles {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: -30px;
+    }
+  }
+}

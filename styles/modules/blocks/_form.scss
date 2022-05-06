@@ -1,0 +1,40 @@
+.form {
+  display: flex;
+  margin-left: 5px;
+  &__input-email {
+    border: 0;
+    max-width: 348px;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 13px 0 13px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    background-color: $inputBgColor;
+    @include fontStyle(normal, 400, 14px, 24px);
+    letter-spacing: 0.375px;
+    @include mobileStyles {
+      width: 175px;
+      font-size: 11px;
+      line-height: 24px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline-style: none;
+    }
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+  &_apply {
+    grid-column: 2/3;
+    @include smallDesktopStyles {
+      grid-column: 1/2;
+    }
+  }
+
+}

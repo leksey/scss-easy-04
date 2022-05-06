@@ -1,0 +1,118 @@
+.composition {
+  @include sectionDefaultStyles (50px, minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content) 1fr minmax(min-content, max-content), $compositionBgColor, $compositionFontColor);
+  @include smallDesktopStyles {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+  @include mobileStyles {
+    gap: 60px;
+    padding: 40px 20px 20px 20px;
+  }
+  &__label {
+    @include removeSpacing;
+    padding: 0 4px;
+    @include fontStyle(normal, 400, 18px, 28px);
+    text-transform: uppercase;
+    @include smallTabletStyles {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 20px 2px 0 2px;
+      margin-bottom: -30px;
+      &:first-child {
+        border-top: solid 1px;
+      }
+    }
+  }
+  &__title {
+    @include removeSpacing;
+    white-space: pre-line;
+    @include fontStyle(normal, 400, 64px, 64px);
+    @include smallTabletStyles {
+      font-size: 30px;
+      line-height: 38px;
+    }
+  }
+  &__photo {
+    @include removeSpacing;
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 1/5;
+    @include smallDesktopStyles {
+      grid-column: 1/2;
+      grid-row: 3/5;
+    }
+  }
+  &__caption-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 20px;
+    @include smallDesktopStyles {
+      margin-top: 0;
+
+    }
+    @include mobileStyles {
+      margin-top: 0;
+      margin-bottom: -30px;
+      gap: 36px;
+    }
+  }
+  &__caption {
+    @include removeSpacing;
+    margin-left: 4px;
+    max-width: 400px;
+    white-space: pre-line;
+    @include fontStyle(normal, 400, 18px, 28px);
+    @include mobileStyles {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  &__caption_bold {
+    font-weight: 700;
+  }
+  &__content-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 56px;
+    margin: 30px 0 0 0;
+    padding: 0 4px;
+    list-style: none;
+    grid-column: 1/3;
+    @include smallDesktopStyles {
+      gap: 0;
+      padding: 0;
+      grid-column: 1/2;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include mobileStyles {
+      margin: 20px 0 0 0;
+    }
+  }
+  &__content-item {
+    @include fontStyle(normal, 400, 18px, 28px);
+    @include smallDesktopStyles {
+      border-bottom: solid 1px;
+      padding: 30px 0 30px;
+      &:last-child {
+        border-bottom: none;
+        padding: 30px 0 0;
+      }
+      &:first-child {
+        padding: 0 0 30px;
+      }
+    }
+    @include mobileStyles {
+      padding: 14px 0 14px;
+      font-size: 14px;
+      line-height: 18px;
+      &:last-child {
+        border-bottom: none;
+        padding: 14px 0 0;
+      }
+      &:first-child {
+        padding: 0 0 14px;
+      }
+    }
+  }
+}

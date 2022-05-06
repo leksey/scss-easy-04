@@ -1,0 +1,118 @@
+.orders {
+  @include sectionDefaultStyles(60px,minmax(min-content, max-content) minmax(min-content, max-content) minmax(min-content, max-content) 1fr, $ordersBgColor, $ordersFontColor);
+  @include smallDesktopStyles {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+  @include mobileStyles {
+    padding: 40px 20px 20px 20px;
+  }
+  &__label {
+    @include removeSpacing;
+    padding: 0 4px;
+    @include fontStyle(normal, 400, 18px, 28px);
+    text-transform: uppercase;
+    @include smallTabletStyles {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0 2px;
+      padding-top: 20px;
+      &:first-child {
+        border-top: solid 1px;
+      }
+    }
+  }
+  &__title {
+    @include removeSpacing;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    @include fontStyle(normal, 400, 64px, 64px);
+    @include smallTabletStyles {
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+  &__photo {
+    @include removeSpacing;
+    margin-top: 46px;
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 3/5;
+    @include smallDesktopStyles {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+    @include mobileStyles {
+      margin-top: 0;
+      grid-row: 3/4;
+    }
+  }
+  &__caption-wrapper {
+    display: flex;
+    gap: 60px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 70px;
+    justify-self: end;
+    grid-column: 2/3;
+    grid-row: 3/5;
+    @include smallDesktopStyles {
+      margin: 0;
+      justify-self: start;
+      grid-column: 1/2;
+      grid-row: 4/5;
+    }
+    @include mobileStyles {
+      gap: 30px;
+    }
+  }
+  &__caption {
+    @include removeSpacing;
+    max-width: 380px;
+    @include fontStyle(normal, 400, 18px, 28px);
+    @include smallDesktopStyles {
+      grid-column: 1/2;
+      grid-row: 5/6;
+    }
+    @include mobileStyles {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+  &__caption_bold {
+    font-weight: 700;
+  }
+  &__content-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 56px;
+    margin: 0;
+    padding: 0 4px;
+    list-style: none;
+    grid-column: 1/3;
+    @include smallDesktopStyles {
+      gap: 0;
+      padding: 0;
+      grid-column: 1/2;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__content-item {
+    @include fontStyle(normal, 400, 18px, 28px, inherit);
+    @include smallDesktopStyles {
+      border-bottom: solid 1px;
+      padding: 30px 0 30px;
+      &:last-child {
+        border-bottom: none;
+        padding: 30px 0 0;
+      }
+      &:first-child {
+        padding: 20px 0 30px;
+      }
+    }
+    @include mobileStyles {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}

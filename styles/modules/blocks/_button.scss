@@ -1,0 +1,36 @@
+.button {
+  @include removeSpacing;
+  background-color: $buttonBgColor;
+  border: solid #000 2px;
+  border-radius: 999px;
+  width: 228px;
+  height: 49px;
+  cursor: pointer;
+  align-self: end;
+  @include fontStyle(normal, 400, 18px, 28px, $buttonFontColor);
+  @include mobileStyles {
+    width: 169px;
+    height: 40px;
+    font-size: 14px;
+  }
+  &_orders {
+    align-self: flex-start;
+  }
+  &_form {
+    height: 50px;
+    width: 205px;
+    border-radius: 0 8px 8px 0;
+    @include fontStyle(normal, 400, 14px, 24px, $buttonFontColor);
+    @include mobileStyles {
+      width: 107px;
+      font-size: 11px;
+      line-height: 24px;
+    }
+  }
+
+  &:hover {
+    font-weight: 500;
+  }
+}
+
+

@@ -1,0 +1,42 @@
+.apply {
+  @include sectionDefaultStyles(50px, 1fr minmax(min-content, max-content), $applyBgColor, $applyFontColor);
+  grid-template-columns: minmax(min-content, max-content) 1fr;
+  row-gap: 120px;
+  padding-bottom: 36px;
+  @include smallDesktopStyles {
+    grid-template-columns: 1fr;
+    padding: 40px;
+  }
+  @include mobileStyles {
+    row-gap: 200px;
+  }
+  @include mobileStyles {
+    padding: 40px 20px 20px 20px;
+  }
+  &__icon {
+    display: block;
+    padding-top: 10px;
+    object-position: center;
+    object-fit: fill;
+    width: 129px;
+    height: 95px;
+    @include smallDesktopStyles {
+      display: none;
+    }
+  }
+  &__title {
+    @include removeSpacing;
+    white-space: pre-line;
+    @include fontStyle(normal, 400, 120px, 120px);
+    @include smallDesktopStyles {
+      font-size: 100px;
+      line-height: 100px;
+    }
+    @include smallTabletStyles {
+      font-size: 48px;
+      line-height: 50px;
+      border-top: solid 1px #fff;
+      padding-top: 20px;
+    }
+  }
+}
